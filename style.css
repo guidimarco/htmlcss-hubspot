@@ -12,11 +12,35 @@
     color: #33475B;
 }
 
+h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 15px 0;
+}
+
+small {
+    display: block;
+    width: 210px;
+    margin: 10px 0;
+}
+
+
 button {
     background-color: #ff7a59;
     color: white;
     border-radius: 5px;
     border: none;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 25px 35px;
 }
 
 button:hover {
@@ -28,7 +52,11 @@ button:hover {
 header {
     height: 80px;
     background-color: #F5F8FA;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
     border-bottom: 2px solid #cbd6e2;
 }
 
@@ -80,6 +108,7 @@ header .search li {
 
 header .search button {
     font-size: 12px;
+    font-weight: normal;
     padding: 10px;
 }
 
@@ -93,6 +122,12 @@ button#log-in:hover {
     background-color: #FFF1EE;
 }
 /* FINE HEADER -------------------------- */
+
+/* INIZIO WRAPPER ----------------------- */
+#wrapper {
+    position: relative;
+    top: 80px;
+}
 
 
 /* INIZIO NAV -------------------------- */
@@ -157,7 +192,7 @@ a.list-nav span.dropdown::after {
 
 /* INIZIO MAIN -------------------------- */
 /* -- parte MAIN: promo -- */
-section.promo{
+div.promo{
     background-color: #425B76;
     padding: 20px;
     color: white;
