@@ -10,37 +10,197 @@
     margin: auto;
 }
 
-/* 0000 INIZIO HEADER ------------------------------------------------------------- */
+/* INIZIO HEADER -------------------------- */
 header {
-    height: 200px;
-    background-color: red;
+    height: 80px;
+    background-color: #F5F8FA;
     position: relative;
 }
 
-/* 0000 FINE HEADER ------------------------------------------------------------- */
+header ul {
+    line-height: 80px;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+/* -- parte sx HEADER -- */
+header .language {
+    width: 50%;
+}
+
+/* -- parte dx HEADER -- */
+header .search {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header .search ul {
+    text-align: right;
+}
+/* FINE HEADER -------------------------- */
 
 
-/* 0000 INIZIO NAV ------------------------------------------------------------- */
+/* INIZIO NAV -------------------------- */
 nav {
-    height: 200px;
+    height: 90px;
+    background-color: white;
+    position: relative;
+}
+
+nav ul {
+    line-height: 90px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+/* -- parte sx NAV: logo -- */
+nav .logo {
+    background-color: red;
+    height: 100%;
+    width: 20%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* -- parte dx NAV: menu -- */
+nav .menu {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav .menu ul {
+    text-align: right;
+}
+/* FINE NAV -------------------------- */
+
+
+/* INIZIO MAIN -------------------------- */
+/* -- parte MAIN: promo -- */
+section.promo{
+    background-color: #425B76;
+    padding: 20px;
+    color: white;
+}
+
+/* -- parte MAIN: main section -- */
+section.main-section {
+    padding: 50px 20px;
+    background-color: #FFF2EE;
+    max-width: 400;
+}
+
+.main-section-box {
+    /* background-color: red; */
+    /* height: 20px; */
+    width: 80%;
+    max-width: 400px;
+}
+
+/* -- parte MAIN: stack section -- */
+section.stack {
+    padding: 50px 0;
+    background-color: white;
+    /* height: 200px;
+    width: 100%; */
+}
+
+.stack::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.stack-box {
+    width: 200px;
+    height: 400px;
+    background-color: red;
+    margin: 0 10px 10px 5px;
+    float: left;
+}
+
+/* -- parte MAIN: community -- */
+section.community {
+    padding: 50px 25px;
+    background-color: #01BBA8;
+    text-align: center;
+}
+
+/* -- parte MAIN: customers -- */
+section.customers {
+    padding: 50px 0 0;
+    background-color: white;
+    /* height: 200px; */
+}
+
+.customers::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.customers > .description {
+    width: 30%;
+    height: 50px;
+    background-color: red;
+    margin-left: 5px;
+    float: left;
+}
+
+.customers > .logo {
+    width: calc(70% - 10px);;
+    height: 50px;
     background-color: blue;
+    margin-left: 5px;
+    float: left;
 }
 
-/* 0000 FINE NAV ------------------------------------------------------------- */
-
-
-/* 0000 INIZIO SECTION ------------------------------------------------------------- */
-section {
-    height: 200px;
-    background-color: green;
+/* -- parte MAIN: final section -- */
+section.final-section {
+    padding: 50px 0;
 }
 
-/* 0000 FINE SECTION ------------------------------------------------------------- */
+.final-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.final-content {
+    width: 30%;
+    padding: 0 5px;
+    float: left;
+}
+
+.final-img {
+    width: 70%;
+    height: 50px;
+    background-color: blue;
+    float: left;
+}
+/* FINE MAIN -------------------------- */
 
 
-/* 0000 INIZIO FOOTER ------------------------------------------------------------- */
+/* INIZIO FOOTER -------------------------- */
 footer {
     height: 200px;
-    background-color: purple;
+    background-color: #33475B;
 }
-/* 0000 FINE FOOTER ------------------------------------------------------------- */
+
+/* -- parte FOOTER: nav -- */
+
+/* -- parte FOOTER: languages -- */
+
+/* -- parte FOOTER: copyright -- */
+
+
+/* FINE FOOTER -------------------------- */
