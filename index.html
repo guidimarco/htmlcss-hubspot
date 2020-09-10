@@ -2,6 +2,10 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <!-- link font raleway -->
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <!-- link fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
         <link rel="stylesheet" href="style.css">
         <title>HubSpot</title>
     </head>
@@ -12,10 +16,10 @@
             <div class="language">
                 <ul>
                     <li>
-                        <a href="#">English</a>
+                        <a href="#"  class="list-header"><i class="fas fa-globe-europe"></i> English <i class="fas fa-caret-down"></i></a>
                     </li>
                     <li>
-                        <a href="#">Contact sales</a>
+                        <a href="#"  class="list-header">Contact sales</a>
                     </li>
                 </ul>
             </div>
@@ -23,15 +27,22 @@
             <!-- PARTE DX ricerca e login -->
             <div class="search">
                 <ul>
-                    <input type="search">
+                    <li>
+                        <i class="fas fa-search" id="search-icon"></i>
+                    </li>
 
-                    <button type="button">
-                        Log in
-                    </button>
+                    <li>
+                        <button id="log-in" type="button">
+                            Log in
+                        </button>
+                    </li>
 
-                    <button type="button">
-                        Get HubSpot free
-                    </button>
+                    <li>
+                        <button type="button">
+                            Get HubSpot free
+                        </button>
+                    </li>
+
                 </ul>
 
             </div>
@@ -152,7 +163,7 @@
 
             <!-- footer languages -->
             <div class="footer-languages">
-                
+
             </div>
 
             <!-- footer copyright -->

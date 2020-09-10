@@ -8,13 +8,28 @@
     width: 80%;
     max-width: 1000px;
     margin: auto;
+    font-family: 'Raleway', sans-serif;
+    color: #33475B;
 }
+
+button {
+    background-color: #ff7a59;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {
+    background-color: #FFBCAC;
+}
+
 
 /* INIZIO HEADER -------------------------- */
 header {
     height: 80px;
     background-color: #F5F8FA;
     position: relative;
+    border-bottom: 2px solid #cbd6e2;
 }
 
 header ul {
@@ -30,6 +45,19 @@ header .language {
     width: 50%;
 }
 
+a.list-header {
+    padding: 10px;
+}
+
+div.language li:first-child a {
+    border-right: 2px solid #cbd6e2;
+}
+
+div.language a {
+    color: #33475B;
+    text-decoration: none;
+}
+
 /* -- parte dx HEADER -- */
 header .search {
     width: 50%;
@@ -40,6 +68,29 @@ header .search {
 
 header .search ul {
     text-align: right;
+}
+
+header .search li {
+    margin-left: 8px;
+}
+
+#search-icon {
+    color: #47BCCE;
+}
+
+header .search button {
+    font-size: 12px;
+    padding: 10px;
+}
+
+#log-in {
+    background-color: #fff;
+    color: #ff7a59;
+    border: 1px solid #ff7a59;
+}
+
+button#log-in:hover {
+    background-color: #FFF1EE;
 }
 /* FINE HEADER -------------------------- */
 
@@ -96,7 +147,6 @@ section.promo{
 section.main-section {
     padding: 50px 20px;
     background-color: #FFF2EE;
-    max-width: 400;
 }
 
 .main-section-box {
