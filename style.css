@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* 0000 INIZIO HEADER ------------------------------------------------------------- */
+header {
+    height: 200px;
+    background-color: red;
+    position: relative;
+}
+
+/* 0000 FINE HEADER ------------------------------------------------------------- */
+
+
+/* 0000 INIZIO NAV ------------------------------------------------------------- */
+nav {
+    height: 200px;
+    background-color: blue;
+}
+
+/* 0000 FINE NAV ------------------------------------------------------------- */
+
+
+/* 0000 INIZIO SECTION ------------------------------------------------------------- */
+section {
+    height: 200px;
+    background-color: green;
+}
+
+/* 0000 FINE SECTION ------------------------------------------------------------- */
+
+
+/* 0000 INIZIO FOOTER ------------------------------------------------------------- */
+footer {
+    height: 200px;
+    background-color: purple;
+}
+/* 0000 FINE FOOTER ------------------------------------------------------------- */
