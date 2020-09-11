@@ -7,7 +7,7 @@
 .container {
     width: 1000px;
     margin: auto;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Heebo', 'Raleway', sans-serif;
     color: #33475B;
 }
 
@@ -132,29 +132,29 @@ button#log-in:hover {
 
 
 /* INIZIO NAV -------------------------- */
-nav {
+nav.sup {
     height: 90px;
     background-color: white;
     position: relative;
 }
 
-nav ul {
+nav.sup ul {
     line-height: 90px;
 }
 
-nav ul li {
+nav.sup ul li {
     display: inline-block;
 }
 
 /* -- parte sx NAV: logo -- */
-nav .logo {
+nav.sup .logo {
     height: 90px;
     width: 100px;
     float: left;
     margin-right: 20px;
 }
 
-nav .logo img {
+nav.sup .logo img {
     width: 100px;
     position: absolute;
     top: 50%;
@@ -162,12 +162,12 @@ nav .logo img {
 }
 
 /* -- parte dx NAV: menu -- */
-nav .menu {
+nav.sup .menu {
     width: calc(100% - 120px);
     float: left;
 }
 
-nav .menu ul {
+nav.sup .menu ul {
     text-align: right;
 }
 
@@ -357,15 +357,53 @@ section.final-section {
 
 /* INIZIO FOOTER -------------------------- */
 footer {
-    height: 200px;
     background-color: #33475B;
+    padding-top: 90px;
 }
 
 /* -- parte FOOTER: nav -- */
+nav.footer-nav {
+    color: white;
+}
+
+nav.footer-nav li.title {
+    display: inline-block;
+    color: white;
+}
+
+nav.footer-nav li.title {
+    width: 23%;
+    vertical-align: top;
+}
+
+.footer-nav ul ul {
+    list-style-type: none;
+}
 
 /* -- parte FOOTER: languages -- */
+.footer-lang ul {
+    text-align: center;
+}
+
+.footer-lang li {
+    display: inline-block;
+    color: white;
+}
 
 /* -- parte FOOTER: copyright -- */
+div.footer-copy {
+    border-top: 1px solid black;
+}
 
+.footer-copy div {
+    width: 50%;
+    height: 200px;
+    float: left;
+}
 
+div.footer-copy::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 /* FINE FOOTER -------------------------- */
