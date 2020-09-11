@@ -5,11 +5,16 @@
 }
 
 .container {
-    width: 80%;
-    max-width: 1000px;
+    width: 1000px;
     margin: auto;
     font-family: 'Raleway', sans-serif;
     color: #33475B;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 h1 {
@@ -20,10 +25,6 @@ h1 {
 h2 {
     font-size: 32px;
     margin-bottom: 20px;
-}
-
-p {
-    margin: 15px 0;
 }
 
 small {
@@ -50,6 +51,7 @@ button:hover {
 
 /* INIZIO HEADER -------------------------- */
 header {
+    width: 100%;
     height: 80px;
     background-color: #F5F8FA;
     position: fixed;
@@ -71,6 +73,7 @@ header ul li {
 /* -- parte sx HEADER -- */
 header .language {
     width: 50%;
+    float: left;
 }
 
 a.list-header {
@@ -87,18 +90,16 @@ div.language a {
 }
 
 /* -- parte dx HEADER -- */
-header .search {
+header .log-in {
     width: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
+    float: left;
 }
 
-header .search ul {
+header .log-in ul {
     text-align: right;
 }
 
-header .search li {
+header .log-in li {
     margin-left: 8px;
 }
 
@@ -106,7 +107,7 @@ header .search li {
     color: #47BCCE;
 }
 
-header .search button {
+header .log-in button {
     font-size: 12px;
     font-weight: normal;
     padding: 10px;
@@ -147,9 +148,10 @@ nav ul li {
 
 /* -- parte sx NAV: logo -- */
 nav .logo {
-    height: 100%;
+    height: 90px;
     width: 100px;
-    position: relative;
+    float: left;
+    margin-right: 20px;
 }
 
 nav .logo img {
@@ -161,11 +163,8 @@ nav .logo img {
 
 /* -- parte dx NAV: menu -- */
 nav .menu {
-    width: calc(100% - 100px);
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
+    width: calc(100% - 120px);
+    float: left;
 }
 
 nav .menu ul {
@@ -183,31 +182,33 @@ a.list-nav span {
     padding: 0 10px;
 }
 
-/* non funziona freccia in basso
 a.list-nav span.dropdown::after {
     content: "\f0dd";
-} */
+    font-family: "Font Awesome 5 free";
+}
 /* FINE NAV -------------------------- */
 
 
 /* INIZIO MAIN -------------------------- */
 /* -- parte MAIN: promo -- */
-div.promo{
+div.promo {
     background-color: #425B76;
-    padding: 20px;
-    color: white;
+    padding: 20px 0;
     line-height: 150%;
+}
+
+.promo .container p {
+    margin: 0 20px;
+    color: white;
 }
 
 /* -- parte MAIN: main section -- */
 section.main-section {
-    padding: 50px 20px;
+    padding: 50px 0;
     background-color: #FFF2EE;
 }
 
 .main-section-box {
-    /* background-color: red; */
-    /* height: 20px; */
     width: 80%;
     max-width: 400px;
 }
@@ -215,23 +216,72 @@ section.main-section {
 /* -- parte MAIN: stack section -- */
 section.stack {
     padding: 50px 0;
-    background-color: white;
-    /* height: 200px;
-    width: 100%; */
-}
-
-.stack::after {
-    content: "";
-    display: table;
-    clear: both;
+    background-color: #F5F8FA;
 }
 
 .stack-box {
-    width: 200px;
-    height: 400px;
-    background-color: red;
-    margin: 0 10px 10px 5px;
+    width: 310px;
+    height: 450px;
+    margin: 0 20px 20px 0;
     float: left;
+    background-color: white;
+    padding: 30px;
+    position: relative;
+}
+
+div.stack-box:first-child {
+    background-color: transparent;
+}
+
+.stack-box span.new {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #00BDA5;
+    border-radius: 10px 5px 5px 10px;
+    color: white;
+}
+
+.stack-box .description {
+    height: 45%;
+}
+
+.description h4, .description p {
+    margin: 10px 0;
+}
+
+.stack-box .features {
+    height: 55%;
+    border-top: 1px solid black;
+}
+
+.stack-box .features ul {
+    list-style-type: none;
+}
+
+.stack-box .features p {
+    padding: 20px 0 10px;
+    text-transform: uppercase;
+}
+
+.stack-box .features li {
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+.stack-box ul span::before {
+    content: "\f058 ";
+    color: #FF7A59;
+    font-family: "Font Awesome 5 free";
+}
+
+.stack-box button {
+    width: 100%;
 }
 
 /* -- parte MAIN: community -- */
@@ -241,33 +291,39 @@ section.community {
     text-align: center;
 }
 
+.community .container {
+    color: white;
+}
+
 /* -- parte MAIN: customers -- */
 section.customers {
     padding: 50px 0 0;
     background-color: white;
-    /* height: 200px; */
+    height: 200px;
 }
 
-.customers::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.customers > .description {
-    width: 30%;
-    height: 50px;
-    background-color: red;
-    margin-left: 5px;
+.customers .description {
+    width: 40%;
     float: left;
 }
 
-.customers > .logo {
-    width: calc(70% - 10px);;
-    height: 50px;
-    background-color: blue;
-    margin-left: 5px;
+.customers .logo {
+    width: calc(60% - 10px);
+    margin-left: 10px;
     float: left;
+}
+
+.logo .sup, .logo .inf {
+    height: 50px;
+}
+
+.customers .logo img {
+    float:right;
+    width: 110px;
+    margin-left: 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* -- parte MAIN: final section -- */
@@ -282,16 +338,19 @@ section.final-section {
 }
 
 .final-content {
-    width: 30%;
+    width: calc(100% - 350px);
+    max-width: 50%;
     padding: 0 5px;
     float: left;
 }
 
 .final-img {
-    width: 70%;
-    height: 50px;
-    background-color: blue;
-    float: left;
+    width: 350px;
+    float: right;
+}
+
+.final-img img {
+    width: 100%;
 }
 /* FINE MAIN -------------------------- */
 
