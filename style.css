@@ -1,15 +1,20 @@
+/* regole di reset e normalizzazione */
+/* ------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container {
-    width: 1080px;
-    margin: auto;
+body {
     font-family: 'Heebo', 'Raleway', sans-serif;
     letter-spacing: 1px;
     color: #33475B;
+}
+
+.container {
+    width: 1080px;
+    margin: auto;
 }
 
 .container::after {
@@ -50,7 +55,6 @@ button:hover {
 
 ul {
     list-style-type: none;
-
 }
 
 ul li {
@@ -62,6 +66,12 @@ a {
     color: inherit;
 }
 
+.dropdown::after {
+    content: " \f0dd";
+    font-size: 150%;
+    font-family: "Font Awesome 5 free";
+    font-weight: bold;
+}
 
 /* INIZIO HEADER ----------------------- */
 /* ------------------------------------- */
@@ -195,9 +205,7 @@ a.list-nav span {
 }
 
 a.list-nav span.dropdown::after {
-    content: "\f0dd";
     color: #7C98B6;
-    font-family: "Font Awesome 5 free";
 }
 /* FINE NAV ---------------------------- */
 /* ------------------------------------- */
@@ -230,8 +238,13 @@ div.promo {
 
 /* -- parte MAIN: main section -- */
 section.main-section {
-    padding: 60px 0;
     background-color: #FFF2EE;
+    background-image: url(https://cdn2.hubspot.net/hubfs/53/raw_assets/public/_Web%20Team%20Assets/Website/assets/svg/hero.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    padding: 60px 0 250px;
+    border-bottom: 3px solid #33475b;
 }
 
 .main-section-box {
@@ -320,6 +333,7 @@ div.stack-box:first-child {
     content: "\f058 ";
     color: #FF7A59;
     font-family: "Font Awesome 5 free";
+    font-weight: bold;
 }
 
 .stack-box button {
@@ -336,6 +350,7 @@ div.stack-box:first-child {
 section.community {
     padding: 110px 0;
     background-color: #01AAB8;
+    background-image: linear-gradient(45deg,#00a4bd,#00bda5);
     text-align: center;
 }
 
@@ -368,7 +383,19 @@ section.community {
 
 .grip-box h2 {
     font-size: 42px;
+    text-transform: uppercase;
     margin-bottom: 0;
+    line-height: 50px;
+    position: relative;
+}
+
+h2.plus::after {
+    content: '\002B';
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .grip-box p {
@@ -395,6 +422,7 @@ section.community {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    text-align: center;
 }
 
 /* -- parte MAIN: customers -- */
@@ -440,7 +468,7 @@ section.customers {
 
 /* -- parte MAIN: final section -- */
 section.final-section {
-    padding: 50px 0;
+    padding: 120px 0;
 }
 
 .final-section::after {
@@ -514,6 +542,27 @@ footer .container {
 
 .footer-nav a:hover {
     color: #58C6DE;
+}
+
+.footer-nav a.dropdown {
+    color: white;
+}
+
+ul.hidden-list {
+    margin-top: 10px;
+}
+
+ul.hidden-list a {
+    font-size: 12px;
+}
+
+/* per il menu a scomparsa */
+.hidden-menu ul {
+    display: none;
+}
+
+.hidden-menu:hover ul {
+    display: block;
 }
 
 #support-button {
@@ -592,22 +641,74 @@ div.footer-copy::after {
     padding: 8px 16px;
 }
 
+
 /* FINE FOOTER -------------------------- */
 /* ---------------------------------------- */
 
 /* ICONA CHAT --------------------------- */
-div.chat {
+/* --------------------------------------- */
+#chat {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    /* z-index: -1; */
+}
+
+#chat .overlay {
+    z-index: 2;
+}
+
+/* chat robot */
+#chat .live-chat {
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* div con img robot */
+.live-chat div:first-of-type {
+    width: 50px;
+    height: 50px;
+    background-image: url(https://static.hsappstatic.net/bots-ui-app/ex/bot-avatar.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* div con simbolo x */
+.live-chat div:nth-of-type(2) {
+    font-size: 23px;
+    color: #7C98B6;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.live-chat p {
+    line-height: 20px;
+    margin-top: 15px;
+}
+
+/* icona chat */
+#chat .chat-icon {
+    width: fit-content;
     font-size: 25px;
     color: white;
-    background-color: #33475B;
+    background-color: #425B76;
     padding: 15px;
     border-radius: 50%;
     box-shadow: 0 0 5px 5px rgba(51, 71, 91, 0.1);
+    float: right;
 }
 
-div.chat:hover {
+div.chat-icon:hover {
     box-shadow: 0 0 10px 5px rgba(51, 71, 91, 0.2);
 }

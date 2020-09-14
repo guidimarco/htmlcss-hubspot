@@ -393,7 +393,7 @@
                                 </div>
 
                                 <div>
-                                    <h2>150+</h2>
+                                    <h2 class="plus">150</h2>
                                     <p>HubSpot user group</p>
                                 </div>
                             </div>
@@ -404,7 +404,7 @@
                                 </div>
 
                                 <div>
-                                    <h2>7M+</h2>
+                                    <h2 class="plus">7m</h2>
                                     <p>monthly visits</p>
                                 </div>
 
@@ -416,7 +416,7 @@
                                 </div>
 
                                 <div>
-                                    <h2>276K+</h2>
+                                    <h2 class="plus">276k</h2>
                                     <p>certified professionals</p>
                                 </div>
                             </div>
@@ -438,7 +438,7 @@
                                 </div>
 
                                 <div>
-                                    <h2>500+</h2>
+                                    <h2 class="plus">500</h2>
                                     <p>integrations</p>
                                 </div>
                             </div>
@@ -460,7 +460,7 @@
                                 </div>
 
                                 <div>
-                                    <h2>2.6M+</h2>
+                                    <h2 class="plus">2.6m</h2>
                                     <p>social followers</p>
                                 </div>
                             </div>
@@ -605,7 +605,33 @@
                                     <li><a href="#">Join a Local User Group</a></li>
                                     <li><a href="#">PieSync Integration</a></li>
                                     <li><a href="#">HubSpot Templates</a></li>
-                                    <li><a href="#">Free Tools & Generators</a></li>
+
+                                    <!-- menu a tendina nascosto -->
+                                    <div class="hidden-menu">
+                                        <li><a href="#" class="dropdown">Free Tools & Generators</a>
+
+
+                                            <ul class="hidden-list">
+                                                <li> <a href="#">Get a Free Website Report</a> </li>
+                                                <li> <a href="#">Invoice Template Generator</a> </li>
+                                                <li> <a href="#">Email Signature Generator</a> </li>
+                                                <li> <a href="#">Marketing Plan Template Generator</a> </li>
+                                                <li> <a href="#">Blog Ideas Generator</a> </li>
+                                                <li> <a href="#">Make My Persona</a> </li>
+                                                <li> <a href="#">Business Templates</a> </li>
+                                                <li> <a href="#">COVID-19 Benchmark Data</a> </li>
+
+                                            </ul>
+
+
+
+
+                                        </li>
+                                    </div>
+
+
+
+                                    <!-- pulsante per il supporto -->
                                     <li><button id="support-button" type="button">Contact HubSpot Support</button></li>
                                     <li>
                                         <ul class="footer-social">
@@ -667,8 +693,23 @@
 
         <!-- icona della chat -->
 
-        <div class="chat">
-            <i class="fas fa-comments"></i>
+        <div id="chat">
+            <div class="live-chat overlay">
+                <!-- div con img robot -->
+                <div></div>
+
+                <!-- div con simbolo chiusura -->
+                <div><i class="fas fa-times"></i></div>
+
+                <p>&#128075; Want to chat about HubSpot? I'm here to help you find your way.</p>
+
+            </div>
+
+            <div class="chat-icon overlay">
+                <i class="fas fa-comments"></i>
+
+            </div>
+
         </div>
 
 
