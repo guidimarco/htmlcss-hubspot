@@ -61,6 +61,19 @@ ul li {
     display: inline-block;
 }
 
+/* per il menu a scomparsa */
+li.hidden-menu {
+    position: relative;
+}
+
+.hidden-menu ul {
+    display: none;
+}
+
+.hidden-menu:hover ul {
+    display: block;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -98,6 +111,7 @@ header .language {
 a.list-header {
     font-size: 16px;
     padding: 10px 0;
+    position: relative;
 }
 
 a.list-header span {
@@ -111,6 +125,38 @@ a.list-header span {
 
 .language i.fa-caret-down {
     color: #7C98B6;
+}
+
+/* ----> menu a scomparsa */
+.hidden-menu-lang {
+    width: 120px;
+    background-color: white;
+    border: 1px solid #cbd6e2;
+    border-radius: 5px;
+    box-shadow: 0 1px 24px rgba(45,62,80,0.12);
+    position: absolute;
+    top: 65px;
+}
+
+ul.hidden-menu-lang {
+    padding: 10px 0;
+}
+
+.hidden-menu-lang li {
+    display: block;
+    line-height: 200%;
+}
+
+.hidden-menu-lang li a {
+    display: block;
+    width: 100%;
+    padding: 3px 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hidden-menu-lang li a:hover {
+    background-color: #E5F5F8;
 }
 
 /* -- parte dx HEADER -- */
@@ -556,14 +602,7 @@ ul.hidden-list a {
     font-size: 12px;
 }
 
-/* per il menu a scomparsa */
-.hidden-menu ul {
-    display: none;
-}
 
-.hidden-menu:hover ul {
-    display: block;
-}
 
 #support-button {
     font-size: 13px;
@@ -651,15 +690,15 @@ div.footer-copy::after {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    /* z-index: -1; */
 }
 
-#chat .overlay {
-    z-index: 2;
+#chat:hover .live-chat {
+    display: block;
 }
 
 /* chat robot */
 #chat .live-chat {
+    display: none;
     width: 250px;
     background-color: white;
     border-radius: 10px;
@@ -670,7 +709,7 @@ div.footer-copy::after {
     position: relative;
 }
 
-/* div con img robot */
+/* ---->div con img robot */
 .live-chat div:first-of-type {
     width: 50px;
     height: 50px;
@@ -683,7 +722,7 @@ div.footer-copy::after {
     transform: translate(-50%,-50%);
 }
 
-/* div con simbolo x */
+/* ------>div con simbolo x */
 .live-chat div:nth-of-type(2) {
     font-size: 23px;
     color: #7C98B6;
@@ -698,7 +737,7 @@ div.footer-copy::after {
 }
 
 /* icona chat */
-#chat .chat-icon {
+#chat-icon {
     width: fit-content;
     font-size: 25px;
     color: white;
@@ -709,6 +748,6 @@ div.footer-copy::after {
     float: right;
 }
 
-div.chat-icon:hover {
+#chat-icon:hover {
     box-shadow: 0 0 10px 5px rgba(51, 71, 91, 0.2);
 }

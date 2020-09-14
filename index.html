@@ -22,11 +22,22 @@
                 <!-- PARTE SX lingua e contatti-->
                 <div class="language">
                     <ul>
-                        <li>
-                            <a href="#"  class="list-header">
-                                <span><i class="fas fa-circle"></i> English <i class="fas fa-caret-down"></i></span>
-
+                        <li class="hidden-menu">
+                            <a href="#" class="list-header">
+                                <span>
+                                    <i class="fas fa-circle"></i> English <i class="fas fa-caret-down"></i>
+                                </span>
                             </a>
+
+                            <!-- menu a scomparsa -->
+                            <ul class="hidden-menu-lang">
+                                <li><a href="#">Deutsch</a></li>
+                                <li><a href="#">日本語</a></li>
+                                <li><a href="#">Espa&#241;ol</a></li>
+                                <li><a href="#">Portugu&#234;s</a></li>
+                                <li><a href="#">Fran&#231;ais</a></li>
+                            </ul>
+
                         </li>
                         <li>
                             <a href="#"  class="list-header">
@@ -173,7 +184,10 @@
                         <div class="stack-box">
 
                             <div class="description">
-                                <h4>Free HubSpot CSM</h4>
+                                <div>
+                                    <h4>Free HubSpot CSM</h4>
+                                </div>
+
                                 <p>Everything you need to organize, track, and build better relationships with leads and customers. Yes, it's 100% free. Forever.</p>
 
                             </div>
@@ -607,10 +621,8 @@
                                     <li><a href="#">HubSpot Templates</a></li>
 
                                     <!-- menu a tendina nascosto -->
-                                    <div class="hidden-menu">
-                                        <li><a href="#" class="dropdown">Free Tools & Generators</a>
-
-
+                                    <li class="hidden-menu"><a href="#" class="dropdown">Free Tools & Generators</a>
+                                        <div class="hidden-menu">
                                             <ul class="hidden-list">
                                                 <li> <a href="#">Get a Free Website Report</a> </li>
                                                 <li> <a href="#">Invoice Template Generator</a> </li>
@@ -622,17 +634,17 @@
                                                 <li> <a href="#">COVID-19 Benchmark Data</a> </li>
 
                                             </ul>
+                                        </div>
 
+                                    </li>
 
-
-
-                                        </li>
-                                    </div>
 
 
 
                                     <!-- pulsante per il supporto -->
                                     <li><button id="support-button" type="button">Contact HubSpot Support</button></li>
+
+                                    <!-- icone social -->
                                     <li>
                                         <ul class="footer-social">
                                             <li><a href="#"><i class="fas fa-at"></i></a></li>
@@ -691,10 +703,12 @@
 
         </div>
 
-        <!-- icona della chat -->
 
+
+        <!-- icona della chat -->
         <div id="chat">
-            <div class="live-chat overlay">
+
+            <div class="live-chat">
                 <!-- div con img robot -->
                 <div></div>
 
@@ -705,7 +719,7 @@
 
             </div>
 
-            <div class="chat-icon overlay">
+            <div id="chat-icon">
                 <i class="fas fa-comments"></i>
 
             </div>
