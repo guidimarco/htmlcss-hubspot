@@ -66,11 +66,11 @@ li.hidden-menu {
     position: relative;
 }
 
-.hidden-menu ul {
+.hidden-menu div {
     display: none;
 }
 
-.hidden-menu:hover ul {
+.hidden-menu:hover div {
     display: block;
 }
 
@@ -129,16 +129,16 @@ a.list-header span {
 
 /* ----> menu a scomparsa */
 .hidden-menu-lang {
-    width: 120px;
+    min-width: 120px;
     background-color: white;
     border: 1px solid #cbd6e2;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 0 1px 24px rgba(45,62,80,0.12);
     position: absolute;
     top: 65px;
 }
 
-ul.hidden-menu-lang {
+.hidden-menu-lang ul {
     padding: 10px 0;
 }
 
@@ -157,6 +157,19 @@ ul.hidden-menu-lang {
 
 .hidden-menu-lang li a:hover {
     background-color: #E5F5F8;
+}
+
+.square {
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -8px;
+    right: 21px;
+    background-color: white;
+    border-top: 1px solid #cbd6e2;
+    border-left: 1px solid #cbd6e2;
+    border-radius: 2px;
 }
 
 /* -- parte dx HEADER -- */
